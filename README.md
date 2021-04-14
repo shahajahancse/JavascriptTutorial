@@ -71,3 +71,26 @@ You can use a code block that begins with a left curly brace ({) and ends with t
 An expression is a piece of code that evaluates to a value. For example:
 2 + 1
 The above expression returns 3 so it is a valid expression.
+
+### Keywords & Reserved words.
+
+##### Keywords have a special meaning in a language, and are part of the syntax.
+##### Reserved words are words that cannot be used as identifiers (variables, functions, etc.), because they are reserved by the language.
+JavaScript defines a list of keywords and reserved words that have special uses. You cannot use the keywords and reserved words as the identifiers. The list of JavaScript keywords and reserved words is as follows:
+
+###### abstract	###### arguments	###### await	###### boolean
+###### break	###### byte	###### case	###### catch
+###### char	###### class	###### const	###### continue
+###### debugger	###### default	###### delete	###### do
+###### double	###### else	###### enum	###### eval
+###### export	###### extends	###### false	###### final
+###### finally	###### float	###### for	###### function
+###### goto	###### if	###### implements	###### import
+###### in	###### instanceof	###### int	###### interface
+###### let	###### long	###### native  ###### new
+###### null	###### package	###### private	###### protected
+###### public	###### return	###### short	###### static
+###### super	###### switch	###### synchronized	###### this
+###### throw	###### throws	###### transient	###### true
+###### try	###### typeof	###### var	###### void
+###### volatile	###### while	###### with	###### yield
