@@ -21,8 +21,8 @@ The JavaScript engine is a program that executes JavaScript code. In the beginni
 
 ## Embed JavaScript code in an HTML page.
 
-### Embed JavaScript code directly into the HTML page.
-### Reference an external JavaScript code file.
+* Embed JavaScript code directly into the HTML page.
+* Reference an external JavaScript code file.
 
 ## JavaScript Syntax.
 #### Summary: in this tutorial, you will learn about JavaScript syntax including case-sensitivity, identifiers, comments, statements, and expressions.
@@ -54,6 +54,7 @@ JavaScript supports both single-line and block comments.
 /*
 * This is a block comment that can
 * span multiple lines
+
 */
 
 It is a good practice to use an asterisk to begin the comment line for readability purposes.
@@ -78,19 +79,13 @@ The above expression returns 3 so it is a valid expression.
 ##### Reserved words are words that cannot be used as identifiers (variables, functions, etc.), because they are reserved by the language.
 JavaScript defines a list of keywords and reserved words that have special uses. You cannot use the keywords and reserved words as the identifiers. The list of JavaScript keywords and reserved words is as follows:
 
-###### abstract	###### arguments	###### await	###### boolean
-###### break	###### byte	###### case	###### catch
-###### char	###### class	###### const	###### continue
-###### debugger	###### default	###### delete	###### do
-###### double	###### else	###### enum	###### eval
-###### export	###### extends	###### false	###### final
-###### finally	###### float	###### for	###### function
-###### goto	###### if	###### implements	###### import
-###### in	###### instanceof	###### int	###### interface
-###### let	###### long	###### native  ###### new
-###### null	###### package	###### private	###### protected
-###### public	###### return	###### short	###### static
-###### super	###### switch	###### synchronized	###### this
-###### throw	###### throws	###### transient	###### true
-###### try	###### typeof	###### var	###### void
-###### volatile	###### while	###### with	###### yield
+###### abstract	arguments	await	boolean  break	byte	case	catch
+###### char	class	const	continue  debugger	default	delete	do
+###### double	else	enum	eval  export	extends	false	final
+###### finally	float	for	function  goto	if	implements	import
+###### in	instanceof	int	interface  let	long	native	new
+###### null	package	private	protected  public	return	short	static
+###### super	switch	synchronized	this  throw	throws	transient	true
+###### try	typeof	var	void  volatile	while	with	yield
+
+
