@@ -30,7 +30,7 @@ let inProgress = true;
 let completed = false;
 console.log(typeof inProgress); // boolean
  */
-
+/*
 console.log(Boolean('Hi'));// true
 console.log(Boolean(''));  // false
 
@@ -62,4 +62,19 @@ let contact = {
 };
 
 console.log(contact.firstName);
-console.log(contact.address.city);
+console.log(contact.address.city); */
+
+let a = Boolean('Hi');
+console.log(a); // true
+console.log(typeof(a)); // boolean
+console.log(a.valueOf()); // false
+let b = Boolean(false);
+
+console.log(b.valueOf());
+console.log(b.toString()); // "false"
+
+let falseObj = new Boolean(false);
+if (falseObj) {
+  console.log("weird part of the Boolean object");
+}
+
