@@ -19,10 +19,48 @@
         counter = "foo";   // counter is now a string
         console.log(counter);
         console.log(typeof(counter)); //string */
+
+        var numberObject = new Number(100);
+        console.log(numberObject.valueOf()); // 100
+
+        var aNumber = new Number(10);
+        console.log(aNumber.toString()); // "10"
+        console.log(aNumber.toString(2)); // "1010"
+
+        let x = 10;
+        console.log(x.toString(16)); // "a"
+
+        var distance = 19.006
+        console.log(distance.toFixed(2)); // 19.01
+        distance = 19.004;
+        console.log(distance.toFixed(2)); // 19.00
+
+        var xa = 10, y = 100, z = 1000;
+        console.log(xa.toExponential());
+        console.log(y.toExponential());
+        console.log(z.toExponential());
+
+        x = 9.12345;
+        console.log(x.toPrecision());    // '9.12345'
+        console.log(x.toPrecision(4));   // '9.123'
+        console.log(x.toPrecision(3));   // '9.12'
+        console.log(x.toPrecision(2));   // '9.1'
+        console.log(x.toPrecision(1));   // '9'
+
+        let numberObj = new Number(10);
+        let number = 10;
+
+        // typeof
+        console.log(typeof numberObj);
+        console.log(typeof number);
+        // instanceof
+        console.log(numberObj instanceof Number); // true
+        console.log(number instanceof Number); // false
+
     </script>
 
 
 
-    <script src="js/dataType.js"></script>
+    <!-- <script src="js/dataType.js"></script> -->
 </body>
 </html>
