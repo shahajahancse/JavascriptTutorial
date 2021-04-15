@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+        // Unary plus / minus operator
+        let a = 10;
+        a = +a; // 10
+        console.log('Unary plus :' +a);
+        a = -a; // -10
+        console.log('Unary minus:' +a);
+
+        let s = '10';
+        console.log('string to number convert: ' +s); // 10
+
+        let f = false,
+            t = true;
+        console.log('boolean value convert number : '+ +f +', '+ +t); // 0 & 1
+
+        let product = {
+            valueOf: function () {
+                return 60;
+            }
+        };
+        console.log(+product);
+
+        // Unary increment / decrement operator
+        let dan = 8;
+        ++dan;
+        console.log('Increment operator : ' +dan); // 9
+
+        let den = 9;
+        --den;
+        console.log('Decrement operator : '+den); // 8
+
+        //  prefix
+        let x = 10,
+            y = 20;
+        let z = --x + y;
+        console.log('prefix : ' +z); // 29
+
+        // postfix
+        let i = 10, j = 20;
+        let m = i-- + j;
+        console.log('postfix : ' +m +', '+ i); // 30  9
+        // prefix
+        i = 10;
+        let n = --i + j;
+        console.log('prefix : ' +n +', '+ i); // 29  9
+    </script>
+</body>
+</html>
