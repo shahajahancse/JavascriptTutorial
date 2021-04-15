@@ -21,3 +21,11 @@ function says() {
 }
 says();// Hi
 console.log(message1); // Hi
+
+var a = 20, b = 10;
+{
+    let tmp = a;
+    a = b;
+    b = tmp;
+}
+console.log(tmp); // ReferenceError
