@@ -82,3 +82,23 @@ switch (month) {
 
 console.log(dayCount); // 29
 
+let count = 1;
+while (count < 10) {
+  console.log('while loop : ' +count);
+  count += 2;
+}
+
+// create an array of five random number between 1 and 10
+let rands = [];
+let counts = 0;
+const size = 5;
+
+while (counts < size) {
+  // rands.push(Math.round(Math.random() * 10));
+  rands.push(Math.round(Math.random() * 10));
+  counts++;
+  console.log("The current size of the array is : " + counts);
+}
+
+console.log('Random array :' +rands);
+
