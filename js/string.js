@@ -44,6 +44,47 @@ let subst = "JavaScript String";
 console.log(subst.substr(0, 10)); // "JavaScript"
 console.log(subst.substr(11, 6)); // "String"
 
+// Locating substrings
 let ts = "This is a string";
 console.log(ts.indexOf('is', 3)); //5
 console.log(ts.lastIndexOf("is")); // 5
+
+// Removing whitespace characters
+let rawString = ' Hi   ';
+let strippedString = rawString.trim();
+console.log(strippedString); // "Hi"
+console.log(rawString.trimStart());
+console.log(rawString.trimEnd());
+
+// Changing cases
+let greeting = 'Hello';
+console.log(greeting.toLowerCase()); // Or used toLocaleLowerCase ()  // 'hello'
+console.log(greeting.toUpperCase()); // Or toLocaleUpperCase()  // 'HELLO';
+
+//  comparing string
+console.log('A'.localeCompare('B')); // -1
+console.log('B'.localeCompare('B')); // 0
+console.log('C'.localeCompare('B')); // 1
+
+// Matching patterns to used match()
+let expr = "1 + 2 = 3";
+let matches = expr.match(/\d+/);
+console.log(matches[0]); // "1"
+// array return to used match()
+matches = expr.match(/\d+/g);
+console.log("Array : " +matches);
+matches.forEach(function (m) {
+  console.log(m);
+});
+
+// search patterns by search(), like match()
+let ser = "This is a test of search()";
+let pos = ser.search(/is/);
+console.log(pos); // 2
+
+// Replacing substrings by replace()
+let re = "the baby kicks the ball";
+// replace "the" with "a"
+let newStr = re.replace(/the/g, "a");
+console.log(newStr); // "a baby kicks a ball"
+console.log(re); // "the baby kicks the ball"
