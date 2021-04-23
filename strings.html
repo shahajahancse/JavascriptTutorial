@@ -7,6 +7,20 @@
     <title>String</title>
 </head>
 <body>
-    <script src="js/string.js"></script>
+    <script>
+        //  split()
+        let str = 'JavaScript String split()';
+        let substrings = str.split(' ', 2);
+        console.log(substrings);
+
+        // Splitting a string using a regular expression
+        let paragraph = 'Good Morning! How are you? This is John. John is my friend.';
+        let sentences = paragraph.split(/[!,?,.]/);
+        console.log(sentences);
+
+        sentences = paragraph.split(/([!,?,.])/);
+        console.log(sentences);
+    </script>
+    <!-- <script src="js/string.js"></script> -->
 </body>
 </html>
