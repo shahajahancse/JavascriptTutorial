@@ -88,3 +88,7 @@ let re = "the baby kicks the ball";
 let newStr = re.replace(/the/g, "a");
 console.log(newStr); // "a baby kicks a ball"
 console.log(re); // "the baby kicks the ball"
+
+let email = "john@example.com";
+let localPart = email.slice(0, email.indexOf("@"));
+console.log(localPart);

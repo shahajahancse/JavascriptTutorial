@@ -20,6 +20,32 @@
 
         sentences = paragraph.split(/([!,?,.])/);
         console.log(sentences);
+
+        // using the indexOf() method.
+        str = 'finding substring in string';
+        let index = str.indexOf('str');
+        console.log(index); // 11
+
+        str = 'You do not know what you do not know until you know.';
+        let substr = 'know';
+        let count = 0;
+        index = str.indexOf(substr);
+        while(index !== -1) {
+            count++;
+            index = str.indexOf(substr, index + 1);
+            console.log(index);
+        }
+        console.log(count);
+
+        // indexOf() is case-sensitive so convert case-insensitive by toLocaleLowerCase()
+        str = 'JS indexOf';
+        substr = 'js';
+        index = str.toLocaleLowerCase().indexOf(substr.toLocaleLowerCase());
+        console.log(index); // 0
+
+        let email = 'john@example.com'
+        let localPart = email.slice(0,email.indexOf('@'));
+        console.log('slice :' +localPart);
     </script>
     <!-- <script src="js/string.js"></script> -->
 </body>
