@@ -18,7 +18,8 @@
     Changing cases to lowercase and uppercase, And localeCompare() Comparing of strings,
 ###### slice()
     to extract a substring from a string. Ex: email.slice(0,email.indexOf('@'));  <!-- let email = 'john@example.com' -->
-######
+###### length()
+    return the length of array and string. Ex: mountains.length;  <!-- let mountains = ['Everest', 'Fuji', 'Nanga Parbat']; -->
 ######
 ######
 ######
