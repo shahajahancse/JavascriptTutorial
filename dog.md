@@ -28,7 +28,8 @@
     Check if an value is an array, Ex Array.isArray(seas); <!-- let seas = ['Black Sea', 'Caribbean Sea']; -->
 ###### splice()
     this method items delete, insert & replace of an array.  Ex: to arrays1.js file
-######
+###### sort()
+    JavaScript Array sort() method to sort arrays of strings, numbers, dates, and objects.
 ######
 ######
 ######
