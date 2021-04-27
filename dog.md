@@ -29,8 +29,9 @@
 ###### splice()
     this method items delete, insert & replace of an array.  Ex: to arrays1.js file
 ###### sort()
-    JavaScript Array sort() method to sort arrays of strings, numbers, dates, and objects.
-######
+    JavaScript Array sort() method to sort arrays of strings, numbers, dates, and objects.   Ex: to arrays1.js file
+###### every()
+    the JavaScript Array every() method to test whether all elements in an array pass the test provided by a test function. Ex: to arrays2.js file
 ######
 ######
 
