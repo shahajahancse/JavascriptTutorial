@@ -32,6 +32,11 @@
     JavaScript Array sort() method to sort arrays of strings, numbers, dates, and objects.   Ex: to arrays1.js file
 ###### every()
     the JavaScript Array every() method to test whether all elements in an array pass the test provided by a test function. Ex: to arrays2.js file
+###### some()
+    JavaScrip Array some() method to test if an array has at least one element that meets a condition. Ex: to arrays2.js file
+######
+######
+######
 ######
 ######
 

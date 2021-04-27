@@ -39,3 +39,39 @@ let gtZero = [].every((e) => e > 0); // any condition
 let ltZero = [].every((e) => e < 0); // any condition
 console.log("gtZero:", gtZero);
 console.log("ltZero:", ltZero);
+
+// the following array has at least one element less than 5, typically use a for loop, like this:
+let marks = [4, 5, 7, 9, 10, 3];
+let lessThanFive = false;
+for (let index = 0; index < marks.length; index++) {
+  if (marks[index] < 5) {
+    lessThanFive = true;
+    break;
+  }
+}
+console.log(lessThanFive);
+// some()
+lessThanFive = marks.some(function (e) {
+    return e < 5;
+});
+console.log(lessThanFive);
+// the ES6 arrow functions, the code can be even shorter
+lessThanFive = marks.some((e) => e < 5);
+console.log(lessThanFive);
+// Check if an element exists in the array
+function exists(value, array) {
+    return array.some((e) => e === value);
+}
+console.log(exists(4, marks));
+console.log(exists(11, marks));
+// Check if an array has one element that is in a range
+result = marks.some(function (e) {
+  return e >= this.min && e <= this.max;
+}, range);
+console.log(result);
+// Caution: Empty arrays, All time return false
+result = [].some((e) => e > 0);
+console.log(result); //false
+result = [].some((e) => e <= 0);
+console.log(result); //false
+
