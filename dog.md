@@ -38,7 +38,8 @@
     JavaScript Array filter() method to filter elements in an array based on a test provided by a callback function.   Ex: to arrays2.js file
 ###### educe() and reduceRight()
     JavaScript array reduce() and reduceRight() methods to reduce an array into a value.  Ex: to arrays3.js file
-######
+###### map()
+    JavaScript Array map() method to transform elements of an array according to a provided function. Ex: to arrays3.js file
 ######
 ######
 
