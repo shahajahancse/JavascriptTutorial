@@ -44,7 +44,8 @@
     JavaScript Array forEach() method to execute a callback on every element of an array.  Ex: to arrays3.js file.
 ###### join()
     JavaScript Array join() method to concatenate all elements of an array into a string separated by a separator. Ex to arrays3.js file.
-######
+###### push() and splice()
+    add a new element at the end of the multidimensional array push(), Insert an element in the middle of the array splice(). Ex to arrays3.js.
 ######
 ######
 ######

@@ -106,6 +106,53 @@ const title = "JavaScript array join example";
 const url = title.split(" ").join("-").toLowerCase();
 console.log(url);
 
-
-
+// Introduction to JavaScript multidimensional array.
+let activities = [
+  ["Work", 9],
+  ["Eat", 1],
+  ["Commute", 2],
+  ["Play Game", 1],
+  ["Sleep", 7],
+];
+console.table(activities);
+console.log(activities[0][1]); // 9
+// Adding elements to the JavaScript multidimensional array.
+// add a new element at the end of the multidimensional array, you use the push() method.
+activities.push(["Study", 2]);
+console.table(activities);
+// To insert an element in the middle of the array splice() method. Inserts an element in the second position of the activities array:
+activities.splice(1, 0, ["Programming", 2]);
+console.table(activities);
+// This example calculates the percentage of the hours spent on each activity and appends the percentage to the inner array.
+activities.forEach((activity) => {
+  let percentage = ((activity[1] / 24) * 100).toFixed();
+  activity[2] = percentage + "%";
+});
+console.table(activities);
+// Removing elements from the JavaScript multidimensional array
+// the following statement removes the last element of the activities array.
+activities.pop();
+console.table(activities);
+// Similarly, remove the elements from the inner array of the multidimensional array by using the pop() method.
+activities.forEach((activity) => {
+  activity.pop(2);
+});
+console.table(activities);
+// Iterating over elements of the JavaScript multidimensional array.
+// To iterate a multidimensional array, you use a nested for loop as in the following example.
+// loop the outer array
+for (let i = 0; i < activities.length; i++) {
+    // get the size of the inner array
+    var innerArrayLength = activities[i].length;
+    // loop the inner array
+    for (let j = 0; j < innerArrayLength; j++) {
+        console.log('[' + i + ',' + j + '] = ' + activities[i][j]);
+    }
+}
+// Or you can use the forEach() method twice:
+activities.forEach((activity) => {
+  activity.forEach((data) => {
+    console.log(data);
+  });
+});
 
