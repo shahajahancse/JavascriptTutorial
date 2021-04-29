@@ -58,6 +58,45 @@ numbers = [16, 25, 36];
 let results = numbers.map(Math.sqrt);
 console.log(results);
 
+// Introduction to JavaScript Array forEach() method.
+// Typically, to execute a function on every element of an array, use a for loop statement.
+let ranks = ["A", "B", "C"];
+for (let i = 0; i < ranks.length; i++) {
+  console.log(ranks[i]);
+}
+// Same as to forEach()
+ranks.forEach(function (e) {
+  console.log(e);
+});
+// More JavaScript Array forEach() method example.
+// The following illustrates Counter constructor function:
+function Counter() {
+  this.count = 0;
+  let self = this;
+  return {
+    increase: function () {
+      self.count++;
+    },
+    current: function () {
+      return self.count;
+    },
+    reset: function () {
+      self.count = 0;
+    },
+  };
+}
+
+var counter = new Counter();
+numbers = [1, 2, 3];
+sum = 0;
+numbers.forEach(function (e) {
+    sum += e;
+    this.increase();
+}, counter);
+
+console.log(sum); // 6
+console.log(counter.current()); // 3
+
 
 
 

@@ -40,6 +40,15 @@
     JavaScript array reduce() and reduceRight() methods to reduce an array into a value.  Ex: to arrays3.js file
 ###### map()
     JavaScript Array map() method to transform elements of an array according to a provided function. Ex: to arrays3.js file
+###### forEach()
+    JavaScript Array forEach() method to execute a callback on every element of an array.  Ex: to arrays3.js file.
+######
+######
+######
+######
+######
+######
+######
 ######
 ######
 
