@@ -42,7 +42,8 @@
     JavaScript Array map() method to transform elements of an array according to a provided function. Ex: to arrays3.js file
 ###### forEach()
     JavaScript Array forEach() method to execute a callback on every element of an array.  Ex: to arrays3.js file.
-######
+###### join()
+    JavaScript Array join() method to concatenate all elements of an array into a string separated by a separator. Ex to arrays3.js file.
 ######
 ######
 ######

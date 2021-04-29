@@ -93,9 +93,18 @@ numbers.forEach(function (e) {
     sum += e;
     this.increase();
 }, counter);
-
 console.log(sum); // 6
 console.log(counter.current()); // 3
+
+// JavaScript Array join() method examples.
+// 1) Using the JavaScript Array join() method to join CSS classes.
+const cssClasses = ["btn", "btn-primary", "btn-active"];
+const btnClass = cssClasses.join(" ");
+console.log(btnClass);
+// 2) Using the JavaScript Array join() method to replace all occurrences of a string.
+const title = "JavaScript array join example";
+const url = title.split(" ").join("-").toLowerCase();
+console.log(url);
 
 
 
