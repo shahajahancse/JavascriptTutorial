@@ -103,3 +103,66 @@ console.log(oddNumbers); // [ 1, 7, 3, 5 ]
 // In ES6,
 oddNumbers = numbers.filter(number => number % 2);
 console.log(oddNumbers); // [ 1, 7, 3, 5 ]
+// Synchronous callback functions
+numbers = [1, 2, 4, 7, 3, 5, 6];
+numbers.sort((a, b) => a - b);
+console.log("Sort : " + numbers);
+// Asynchronous callback functions
+function download(url, callback) {
+  setTimeout(() => {
+    // script to download the picture here
+    console.log(`Downloading ${url} ...`);
+    // process the picture once it is completed
+    callback(url);
+  }, 3000);
+}
+let url = "https://www.javascripttutorial.net/pic.jpg";
+download(url, function (picture) {
+  console.log(`Processing ${picture}`);
+});
+// Handling errors
+function download(url, success, failure) {
+  setTimeout(() => {
+    // script to download the picture here
+    console.log(`Downloading ${url} ...`);
+    // over simplification
+    let error = url.length === 0 || !url;
+    // call the failure or success callback
+    error ? failure(url) : success(url);
+  }, 3000);
+}
+download(
+    "",
+    function (picture) {
+    console.log(`Processing the picture ${picture}`);
+  },
+  function (picture) {
+    console.log(`Handling error...`);
+  }
+);
+
+// Nesting callbacks and the Pyramid of Doom
+function download(url, callback) {
+  setTimeout(() => {
+    // script to download the picture here
+    console.log(`Downloading ${url} ...`);
+    // process the picture once it is completed
+    callback(url);
+  }, 3000);
+}
+
+const url1 = "https://www.javascripttutorial.net/pic1.jpg";
+const url2 = "https://www.javascripttutorial.net/pic2.jpg";
+const url3 = "https://www.javascripttutorial.net/pic3.jpg";
+
+download(url1, function (picture) {
+  console.log(`Processing ${picture}`);
+  // download the second picture
+  download(url2, function (picture) {
+    console.log(`Processing ${picture}`);
+    // download the third picture
+    download(url3, function (picture) {
+      console.log(`Processing ${picture}`);
+    });
+  });
+});
