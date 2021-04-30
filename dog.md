@@ -35,7 +35,7 @@
 ###### some()
     JavaScrip Array some() method to test if an array has at least one element that meets a condition. Ex: to arrays2.js file
 ###### filter()
-    JavaScript Array filter() method to filter elements in an array based on a test provided by a callback function.   Ex: to arrays2.js file
+    The filter() method creates a new array with the elements that pass the test implemented by a function.   Ex: to arrays2.js file
 ###### educe() and reduceRight()
     JavaScript array reduce() and reduceRight() methods to reduce an array into a value.  Ex: to arrays3.js file
 ###### map()

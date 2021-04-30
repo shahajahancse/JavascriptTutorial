@@ -87,3 +87,19 @@ const calculator = (function () {
 })();
 console.log(calculator.add(30, 20));
 console.log(calculator.multiply(30, 2));
+
+//  callbacks function and filter()
+let numbers = [1, 2, 4, 7, 3, 5, 6];
+function isOddNumber(number) {
+    return number % 2;
+}
+const isOddNumbers = numbers.filter(isOddNumber);
+console.log(isOddNumbers);  // [ 1, 7, 3, 5 ]
+// To make it shorter
+let oddNumbers = numbers.filter(function(number) {
+    return number % 2;
+});
+console.log(oddNumbers); // [ 1, 7, 3, 5 ]
+// In ES6,
+oddNumbers = numbers.filter(number => number % 2);
+console.log(oddNumbers); // [ 1, 7, 3, 5 ]
