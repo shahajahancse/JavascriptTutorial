@@ -65,3 +65,25 @@ show = () => console.log("Anonymous functions");
 show();
 add = (a, b) => a + b;
 console.log(add(10, 15));
+console.log(window.add(10, 15));
+
+add = (function (a, b) {
+  return a + b;
+})(10, 20);
+console.log(add);
+
+const calculator = (function () {
+  function add(a, b) {
+    return a + b;
+  }
+
+  function multiply(a, b) {
+    return a * b;
+  }
+  return {
+    add: add,
+    multiply: multiply,
+  };
+})();
+console.log(calculator.add(30, 20));
+console.log(calculator.multiply(30, 2));
