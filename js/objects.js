@@ -154,6 +154,13 @@ function Person (firstName, lastName) {
 person = new Person ('John', 'Due');
 console.log(person.getFullName());
 
+console.log(Object.prototype);
+console.log(Object.prototype.constructor === Object); // true
+function Persons (name) {
+    this.name = name;
+}
+console.log(Persons);
+console.log(Persons.prototype);
 
 
 
