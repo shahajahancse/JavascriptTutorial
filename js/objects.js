@@ -128,3 +128,33 @@ person = {
 };
 let descriptor = Object.getOwnPropertyDescriptor(person, 'firstName');
 console.log(descriptor);
+
+// Introduction to JavaScript constructor functions.
+function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+}
+// AND To create a new instance of the Person, you use the new operator:
+person1 = new Person ('jane', 'Due');
+person2 = new Person ('han', 'Due');
+console.log(person1.firstName);
+console.log(person2.firstName);
+// Adding methods to JavaScript constructor functions.
+function Person (firstName, lastName) {
+    if (!new.target) {
+      throw Error("Cannot be called without the new keyword");
+    }
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+    this.getFullName = function () {
+      return this.firstName +' '+ this.lastName;
+    };
+};
+person = new Person ('John', 'Due');
+console.log(person.getFullName());
+
+
+
+
+
