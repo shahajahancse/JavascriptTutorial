@@ -58,3 +58,22 @@ function show() {
   console.log(this === window);
 }
 show();
+
+// To set the strict mode, you can use the directive "use strict" at the beginning of the file.
+"use strict";
+function strict() {
+  console.log(this === undefined);
+}
+strict();
+// AND If you want to apply the strict mode to a specific function only, you place it at the top of the function body
+function shows() {
+  "use strict";
+  console.log(this === undefined); // true
+
+  function display() {
+    console.log(this === undefined); // true
+  }
+  display();
+}
+shows();
+// Method invocation
