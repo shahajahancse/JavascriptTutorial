@@ -43,3 +43,18 @@ teacher.teach = function (subject) {
 // });
 console.log(Object.getPrototypeOf(teacher) === person);
 
+// use of this keyword
+const counter = {
+  count : 0,
+  next : function () {
+    return ++this.count;
+  }
+};
+console.log(counter.next());
+this.color= 'Red';
+console.log(window.color);
+//  Simple function invocation
+function show() {
+  console.log(this === window);
+}
+show();
