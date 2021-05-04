@@ -48,7 +48,8 @@
     add a new element at the end of the multidimensional array push(), Insert an element in the middle of the array splice(). Ex to arrays3.js.
 ###### bind()
     The bind() method creates a new function whose the this keyword is set to a specified value. Ex. constructorPrototype.js
-######
+###### call() and apply()
+    These methods allow you to set the this value when calling a function. constructorPrototype.js
 ######
 ######
 ######

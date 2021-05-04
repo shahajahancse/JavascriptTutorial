@@ -102,7 +102,7 @@ Car.prototype.getBrand = function (brand) {
 }
 car = new Car('Honda');
 console.log(car.getBrand());
-var bmw = Car('BMW');
+// var bmw = Car('BMW');
 //console.log(bmw.brand); // => TypeError: Cannot read property 'brand' of undefined
 // check the Car() function is always invoked using constructor invocation, at the beginning of the Bike() function
 function Bike(brand) {
@@ -111,8 +111,8 @@ function Bike(brand) {
   }
   this.brand = brand;
 }
-bike = Bike('BMW');
-console.log(bike.brand);
+// bike = Bike('BMW');
+// console.log(bike.brand);
 // ES6 syntax
 function Cars(brand) {
   if (!new.target) {
@@ -120,7 +120,31 @@ function Cars(brand) {
   }
   this.brand = brand;
 }
-bike = Cars("BMW");
-console.log(bike.brand);
+// bike = Cars("BMW");
+// console.log(bike.brand);
 // Indirect Invocation
+function getPrefix(prefix) {
+  console.log(prefix + this.brand);
+}
+let honda = {
+  brand : 'Honda',
+};
+let audi = {
+  brand : 'audi',
+};
+getPrefix.call(honda,  "It's a ");
+getPrefix.call(audi, "It's an ");
+getPrefix.apply(honda, ["It's a "]); // "It's a Honda"
+getPrefix.apply(audi, ["It's an "]); // "It's a Audi"
+// ES6
+let getThis = () => this;
+console.log(getThis() === window); // true
+function ES6() {
+  this.speed = 120;
+}
+ES6.prototype.getSpeed = () => {
+  return this.speed;
+}
+let es6 = new ES6();
+es6.getSpeed(); // TypeError
 
