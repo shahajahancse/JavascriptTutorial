@@ -77,3 +77,50 @@ function shows() {
 }
 shows();
 // Method invocation
+let car = {
+  brand : "Honda",
+  getBrand : function () {
+    return this.brand;
+  }
+};
+console.log(car.getBrand());
+let brand = car.getBrand;
+console.log(brand()); // undefined
+brand = car.getBrand.bind(car);
+console.log(brand());
+let bike = {
+  brand: "Harley Davidson",
+};
+brand = car.getBrand.bind(bike);
+console.log(brand());
+// Constructor invocation
+function Car(brand) {
+  this.brand = brand;
+}
+Car.prototype.getBrand = function (brand) {
+  return this.brand;
+}
+car = new Car('Honda');
+console.log(car.getBrand());
+var bmw = Car('BMW');
+//console.log(bmw.brand); // => TypeError: Cannot read property 'brand' of undefined
+// check the Car() function is always invoked using constructor invocation, at the beginning of the Bike() function
+function Bike(brand) {
+  if (!(this instanceof Bike)) {
+    throw Error("Must use the new operator to call the function");
+  }
+  this.brand = brand;
+}
+bike = Bike('BMW');
+console.log(bike.brand);
+// ES6 syntax
+function Cars(brand) {
+  if (!new.target) {
+    throw Error("Must use the new operator to call the function");
+  }
+  this.brand = brand;
+}
+bike = Cars("BMW");
+console.log(bike.brand);
+// Indirect Invocation
+
