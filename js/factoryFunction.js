@@ -30,4 +30,25 @@ john = createPerson('John', 'Due');
 jane = createPerson('Jane', 'Due');
 console.log(john.getFullName());
 console.log(jane.getFullName());
+// remove duplicate method
+const behavior = {
+  getFullName() {
+    return this.firstName + " " + this.lastName;
+  },
+};
+john = createPerson("John", "Doe"),
+jane = createPerson("Jane", "Doe");
+john.getFullName = behavior.getFullName;
+jane.getFullName = behavior.getFullName;
+console.log(john.getFullName());
+console.log(jane.getFullName());
+
+
+const behaviors = {
+  getFullName() {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+
 
