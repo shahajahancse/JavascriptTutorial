@@ -88,3 +88,25 @@ for(var prop in items) {
   total += items[prop];
 }
 console.log(total);
+
+// Introduction to JavaScript enumerable properties
+const jak = {
+  firstName: 'John',
+  lastName: 'Due',
+};
+jak.age = 35;
+for(const prop in jak) {
+  console.log(prop);
+}
+Object.defineProperty(jak, "ssn", {
+  enumerable: false,
+  value: "123-456-7890",
+});
+for (const key in jak) {
+  console.log(jak[key]);
+}
+// ES6
+console.log(jak.propertyIsEnumerable('firstName')); // => true
+console.log(jak.propertyIsEnumerable('lastName')); // => true
+console.log(jak.propertyIsEnumerable('age')); // => true
+console.log(jak.propertyIsEnumerable('ssn')); // => false
