@@ -32,3 +32,16 @@ console.log(y.name);
 y.name = "David";
 console.log(x.name); // 'David'
 console.log(y.name);
+
+// Introduction to primitive wrapper types
+let language = 'JavaScript';
+let s = language.substring(4);
+console.log(s);  // Script
+s = new String("JavaScript");
+console.log(s);
+s = new String("JS");
+let n = new Number(10);
+b = new Boolean(false);
+console.log(b);
+console.log(s);
+console.log(n);
