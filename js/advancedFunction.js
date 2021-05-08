@@ -27,6 +27,38 @@ computer = {
 nameOn(computer);
 console.log(computer.isOn);
 
+// Returning Multiple Values from a Function.
+// Returning multiple values from a function using an array
+function getNames() {
+  // get names from the database or API
+  let firstName = "John",
+    lastName = "Doe";
 
+  // return as an array
+  return [firstName, lastName];
+}
+let names = getNames();
+const firstNamea = names[0],
+    lastNamea = names[1];
+// In ES6, can destructuring assignment syntax to unpack values from an array more intuitively,
+const [firstNameas, lastNameas] = getNames();
+// Returning multiple values from an function using an object
+function getName() {
+  // get names from the database or API
+  let firstName = "John",
+    lastName = "Doe";
+
+  // return values
+  return {
+    firstName,
+    lastName,
+  };
+}
+let name = getName();
+let firstNames = name.firstName,
+  lastNames = name.lastName;
+// ES6
+let { firstNamess, lastNamess } = getName();
+console.log(firstNames);
 
 
