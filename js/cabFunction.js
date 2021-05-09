@@ -37,6 +37,48 @@ function getOddNumbers() {
 let oddNumbers = getOddNumbers(10, 3, 4, 7, 4, 1, 5, 9);
 console.log(oddNumbers);
 
+// Introduction to the JavaScript apply() method
+let person = {
+  firstName: 'John',
+  lastName: 'Due',
+};
+function greet(greeting, message) {
+  return `${greeting} ${this.firstName}. ${message}`;
+}
+result = greet.apply(person, ['Hello', 'How are you?']);
+console.log(result);
+result = greet.call(person, 'Hello', 'How are you?');
+console.log(result);
+// Function borrowing of apply().
+const computer = {
+  name: 'macBook',
+  isOn: false,
+  turnOn(){
+    this.isOn = true;
+    return `The ${this.name} is On`;
+  },
+  turnOff(){
+    this.isOn = false;
+    return `The ${this.name} is Off`;
+  }
+};
+const server = {
+  name: 'Dell powerEdge t30',
+  isOn: false,
+};
+result = computer.turnOn.apply(server);
+console.log(result);
+result = computer.turnOff.apply(server);
+console.log(result);
+// Using the apply() method to append an array to another.
+let arr = [1, 2, 3];
+let numbers = [4, 5, 6];
+arr.push.apply(arr, numbers);
+console.log(arr);
+
+
+
+
 
 
 
