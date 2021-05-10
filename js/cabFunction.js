@@ -76,10 +76,31 @@ let numbers = [4, 5, 6];
 arr.push.apply(arr, numbers);
 console.log(arr);
 
-
-
-
-
+// Introduction to JavaScript bind() method.
+person = {
+  name: "John Due",
+  getName: function () {
+    console.log(this.name);
+  }
+};
+setTimeout(person.getName(), 1000);
+// Or
+let f = person.getName.bind(person);
+// setTimeout(f, 1000);Using bind() to borrow methods from a different object
+let runner = {
+  name: "Runner",
+  run: function (speed) {
+    console.log(this.name + " runs at " + speed + " mph.");
+  },
+};
+let flyer = {
+  name: "Flyer",
+  fly: function (speed) {
+    console.log(this.name +' flies at '+ speed +'mph.');
+  },
+};
+let run = runner.run.bind(flyer, 20);
+run();
 
 
 
