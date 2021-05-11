@@ -60,3 +60,11 @@ str = `1st line
 matches = str.match(re);
 console.log(matches);
 
+// Regular Expression: Sets and Ranges
+str = 'How cats, bats and rats become Halloween animals';
+re = /[cbr]ats/g;
+result = str.match(re);
+console.log(result);
+
+result = "It is 🍎".match(/[🍎🍅🍓]/u);
+console.log(result);
