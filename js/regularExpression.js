@@ -46,3 +46,17 @@ console.log(str.match(re));
 phone = "+1-(408)-555-0105";
 re = /\D/g;
 console.log(phone.replace(re, ""));
+
+// The caret & dollar anchor match of the text.
+let isValid = /^\d\d:\d\d$/.test('12:05');
+console.log(isValid);  //true
+let valid = /^\d\d:\d\d$/.test("12:105");
+console.log(valid); //false
+// Multiline mode of anchors ^ and $: the m flag.
+str = `1st line
+2nd line
+3rd line`;
+  re = /^\d/gm;
+matches = str.match(re);
+console.log(matches);
+
