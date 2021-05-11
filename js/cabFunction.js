@@ -120,6 +120,50 @@ function sumOfDigits(num) {
 }
 console.log(sumOfDigits(320));
 
+// Introduction to JavaScript closures
+// Lexical scoping
+let name = "John";
+function greetings() {
+  let message = "Hi";
+  console.log(message + " " + name);
+
+  function sayHi() {
+    console.log(message);
+  }
+  sayHi();
+}
+greetings();
+// More JavaScript Closure example
+function greetinga(message) {
+   return function(name){
+        return message + ' ' + name;
+   }
+}
+let sayHi = greetinga('Hi');
+let sayHello = greetinga('Hello');
+console.log(sayHi('John')); // Hi John
+console.log(sayHello('John')); // Hello John
+// JavaScript closures in a loop
+/* for (var index = 1; index <= 3; index++) {
+  setTimeout(function () {
+    console.log("after " + index + " second(s):" + index);
+  }, index * 1000);
+} */
+// Using the IIFE solution
+/* for (var index = 1; index <= 3; index++) {
+  (function (index) {
+    setTimeout(function () {
+      console.log("after " + index + " second(s):" + index);
+    }, index * 1000);
+  })(index);
+} */
+// Using let keyword in ES6
+for (let index = 1; index <= 3; index++) {
+  setTimeout(function () {
+    console.log("after " + index + " second(s):" + index);
+  }, index * 1000);
+}
+
 
 
 
