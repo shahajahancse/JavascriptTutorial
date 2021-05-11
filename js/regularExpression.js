@@ -26,3 +26,23 @@ console.log(result);  //["Ok", "OK"]
 str = "Are you OK? Yes, I'm OK.";
 result = str.replace(/OK/gi, "fine");
 console.log(result);
+
+// Introduction to the character classes
+let phone = "+1-(408)-555-0105";
+re = /\d/g;
+let numbers = phone.match(re);
+let phoneNo = numbers.join("");
+console.log(phoneNo);
+// Or short, chain system.
+console.log('+1-(408)-555-0105'.match(/\d/g).join(''));
+str = "O2 is oxygen";
+re = /\w\d/g;
+console.log(str.match(re));
+
+str = "ES6 Tutorial";
+re = /ES\d/g;
+console.log(str.match(re));
+// Inverse Classes
+phone = "+1-(408)-555-0105";
+re = /\D/g;
+console.log(phone.replace(re, ""));
