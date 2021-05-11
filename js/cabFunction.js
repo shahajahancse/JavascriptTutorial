@@ -102,6 +102,24 @@ let flyer = {
 let run = runner.run.bind(flyer, 20);
 run();
 
+// Introduction to the JavaScript recursive functions.
+function countDown(fromNumber) {
+  console.log(fromNumber);
+  let nextNumber = fromNumber - 1;
+  if (nextNumber > 0) {
+    countDown(nextNumber);
+  }
+}
+countDown(3);
+// Calculate the sum of digits of a number example
+function sumOfDigits(num) {
+  if (num == 0) {
+    return 0;
+  }
+  return (num % 10) + sumOfDigits(Math.floor(num / 10));
+}
+console.log(sumOfDigits(320));
+
 
 
 
