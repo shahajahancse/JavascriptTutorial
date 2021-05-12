@@ -106,3 +106,13 @@ console.log(results);
 // Decimal numbers:/^\d*.\d+$/
 // Whole numbers and decimal numbers:/^\d*(.\d+)?$/
 // Negative, positive whole numbers & decimal numbers:/^-?\d*(.\d+)?$/
+
+// Introduction to the JavaScript String search() function.
+re = /[A-Z]/;
+str = "hi There! How are you?";
+index = str.search(re);
+console.log(index);
+re = /[0-9]/;
+str = "Hello, JavaScript!";
+index = str.search(re);
+console.log(index);
