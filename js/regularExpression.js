@@ -79,3 +79,30 @@ str = "I start coding JS at 05:30 AM";
 re = /\b\d\d:\d\d\b/;
 result = str.match(re);
 console.log(result);
+
+// use quantifiers to match a number of instances of a character, group, or character class in a string.
+// er = /\d{4}/ = /\d{4}/;
+str = "The official name of ES11 is ES2020";
+re = /\d{2,4}/g; // The range matches a character or character class from n to m times.
+result = str.match(re);
+console.log(result);
+
+numbers = "+1-(408)-555-0105".match(/\d{1,}/g);
+console.log(numbers);
+// Same as
+phone = "+1-(408)-555-0105";
+result = phone.match(/\d+/g);
+console.log(result);
+// The quantifier ?
+str = "Is this color or colour?";
+result = str.match(/colou?r/g);
+console.log(result);
+// The quantifier *
+str = "JavaScript is not Java";
+re = /Java\w*/g;
+results = str.match(re);
+console.log(results);
+// Whole numbers:/^\d+$/
+// Decimal numbers:/^\d*.\d+$/
+// Whole numbers and decimal numbers:/^\d*(.\d+)?$/
+// Negative, positive whole numbers & decimal numbers:/^-?\d*(.\d+)?$/
