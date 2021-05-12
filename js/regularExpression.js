@@ -116,3 +116,16 @@ re = /[0-9]/;
 str = "Hello, JavaScript!";
 index = str.search(re);
 console.log(index);
+
+// Introduction to the JavaScript String match() method.
+str = 'Price : $5-$10';
+console.log(str.match(/\$\d+/g));
+// Using the match() method with the expression that has the global flag
+str = "Price: $5–$10";
+result = str.match(/\$\d+/);
+console.log(result);
+// Using the match() method with the named capturing group
+str = "I like yellow color palette!";
+re = /(?<color>yellow) color/;
+result = str.match(re);
+console.log(result);
