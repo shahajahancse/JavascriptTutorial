@@ -68,3 +68,14 @@ console.log(result);
 
 result = "It is 🍎".match(/[🍎🍅🍓]/u);
 console.log(result);
+
+// use the word boundary in regular expressions.
+console.log('Hello, JS!'.match(/\bJS\b/)); //true
+console.log('Hello, JSscript!'.match(/\bJS\b/)); // null
+console.log('Hello, JSscript!'.match(/JS/)); // ["JS"]
+console.log('Hello, JS!'.match(/JS/)); // ["JS"]
+console.log("ES 2015".match(/\b\d\d\d\d\b/));
+str = "I start coding JS at 05:30 AM";
+re = /\b\d\d:\d\d\b/;
+result = str.match(re);
+console.log(result);
