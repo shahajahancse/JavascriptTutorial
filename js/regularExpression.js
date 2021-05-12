@@ -129,3 +129,19 @@ str = "I like yellow color palette!";
 re = /(?<color>yellow) color/;
 result = str.match(re);
 console.log(result);
+
+// Introduction to the JavaScript String replace() method.
+str = 'JS will, JS will rock you!';
+let newStr = str.replace('JS', 'JavaScript');
+console.log(newStr);
+newStr = str.replace(/JS/g, "JavaScript");
+console.log(newStr);
+
+str = "I like to eat, eat, eat apples and bananas";
+re = /apples|bananas/gi;
+newStr = str.replace(re, (match) => {
+    console.log({match});
+    return match.toUpperCase();
+});
+console.log(newStr);
+
