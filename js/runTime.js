@@ -28,3 +28,22 @@ function task(message) {
 console.log("Start script...");
 task("Download a file.");
 console.log("Done!");
+
+// Introduction to the JavaScript hoisting.
+let z = 10;
+let y = 20;
+let results = adds(z, y);
+console.log(results);
+function adds(z, y) {
+  return z + y;
+}
+
+x = 20;
+y = 10;
+result = addd(x, y);
+console.log(result);
+var addd = function (x, y) {
+  return x + y;
+};
+
+
