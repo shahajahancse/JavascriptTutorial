@@ -38,12 +38,37 @@ function adds(z, y) {
   return z + y;
 }
 
-x = 20;
-y = 10;
-result = addd(x, y);
-console.log(result);
-var addd = function (x, y) {
-  return x + y;
-};
+// x = 20;
+// y = 10;
+// result = addd(x, y);
+// console.log(result);
+// var addd = function (x, y) {
+//   return x + y;
+// };
 
+// JavaScript variable scope that determines the visibility and accessibility of variables.
+var message = "Hi";
+function say() {
+  var message = "Hello";
+  console.log(message);
+}
+say();
+console.log(message);
+
+y = 20;
+function bar() {
+  y = 200;
+  function baz() {
+    console.log(y);
+  }
+  baz();
+}
+bar();
+
+"use strict";
+function getCounters() {
+  counters = 10;
+  return counters;
+}
+console.log(getCounters());
 
