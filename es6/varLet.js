@@ -194,3 +194,54 @@ console.log(e); // 7
 f = 0b111;
 console.log(f); // 7
 
+// Introduction to JavaScript Array destructuring
+function getScores() {
+    return [70, 80, 90];
+}
+scores = getScores();
+let x = scores[0];
+let y = scores[1];
+let z = scores[2];
+// same as es6
+let [ab, bc, ca] = getScores();
+console.log(ab); // 70
+console.log(bc); // 80
+console.log(ca); // 90
+// Array Destructuring Assignment and Rest syntax
+function Scores() {
+    return [70, 80, 90, 100];
+}
+let [s, t, ...args] = Scores();
+console.log(s);
+console.log(t);
+console.log(args);
+// Nested array destructuring.
+function getProfile() {
+    return [
+        'John',
+        'Doe',
+        ['Red', 'Green', 'Blue']
+    ];
+}
+let [
+    firstName,
+    lastName,
+    [
+        color1,
+        color2,
+        color3
+    ]
+] = getProfile();
+console.log(firstName);
+console.log(lastName);
+console.log(color1, color2, color3); // Red Green Blue
+// Array Destructuring Assignment Applications
+function stat(a, b) {
+    return [
+        a + b,
+        (a + b) / 2,
+        a - b
+    ]
+}
+let [ssums, average, difference] = stat(20, 10);
+console.log(ssums, average, difference); // 30, 15, 10
