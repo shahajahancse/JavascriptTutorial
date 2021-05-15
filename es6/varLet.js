@@ -177,3 +177,20 @@ console.log(copiedScores); // [80, 70, 90]
 let chars = ['A', ...'BC', 'D'];
 console.log(chars); // ["A", "B", "C", "D"]
 
+// A Quick Look at Octal and Binary Literals in ES6
+// es5
+let a = 051;
+console.log(a); // 41
+// es6
+let c = 0o51;
+console.log(c); // 41
+// let d = 0o58;
+// console.log(d); // SyntaxError
+// Binary literals
+// es5
+let e = parseInt('111',2);
+console.log(e); // 7
+// es6
+f = 0b111;
+console.log(f); // 7
+
