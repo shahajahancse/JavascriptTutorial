@@ -144,3 +144,36 @@ const combine = (...args) => {
     return args.reduce((prev, curr) => prev +' '+ curr);
 }
 console.log(combine("JavaScript", "Rest", "Parameters"));
+
+// Introduction to the JavaScript spread operator
+const odd = [1, 3, 5];
+const combined = [2, 4, 6, 8, ...odd];
+console.log(combined);
+function f(a, b, ...arr) {
+    console.log(arr);
+}
+f(1,2,3,4,5,6,7);
+// The rest parameters must be the last arguments of a function. However, the spread operator can be anywhere:
+let combineds = [...odd, 2, 4, 6];
+console.log(combineds);
+// Or
+combineds = [8, ...odd, 6, 10];
+console.log(combineds);
+// Array’s push() method
+var rivers = ["Nile", "Ganges", "Yangte"];
+var moreRivers = ["Danube", "Amazon"];
+Array.prototype.push.apply(rivers, moreRivers);
+console.log(rivers);
+// JavaScript spread operator and array manipulation
+let numbers = [1, 2];
+let moreNumbers = [3, 4];
+let allNumbers = [...numbers, ...moreNumbers];
+console.log(allNumbers); // [1, 2, 3, 4]
+// Copying an array
+let scores = [80, 70, 90];
+let copiedScores = [...scores];
+console.log(copiedScores); // [80, 70, 90]
+// JavaScript spread operator and strings
+let chars = ['A', ...'BC', 'D'];
+console.log(chars); // ["A", "B", "C", "D"]
+
