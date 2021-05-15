@@ -113,3 +113,34 @@ let getPrice = function (price, tax = price * taxRate()) {
 }
 getPrice(100);
 
+// Introduction to JavaScript rest parameters
+function sum(...args) {
+    let total = 0;
+    for (const a of args) {
+        total += a;
+    }
+    console.log(total);
+    // same as work
+    total = 0;
+    for (const a in args) {
+        total = args[a] + total;
+    }
+    console.log(total);
+}
+sum(1, 2, 3);
+function sums(...args) {
+    return args.filter(e => typeof e === 'number').reduce((prev, curr)=> prev + curr);
+}
+let result = sums(10, "Hi", null, undefined, 20);
+console.log(result);
+// es5
+function sumss() {
+    return Array.prototype.filter.call(arguments, e => typeof e === 'number').reduce((prev, curr) => prev + curr);
+}
+result = sums(10, "Hi", null, undefined, 20);
+console.log(result);
+// Javascript rest parameters and Arrow function
+const combine = (...args) => {
+    return args.reduce((prev, curr) => prev +' '+ curr);
+}
+console.log(combine("JavaScript", "Rest", "Parameters"));
