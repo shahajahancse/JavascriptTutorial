@@ -40,7 +40,32 @@ let post = {
     tags: ['es6', 'template literals', 'JavaScript'],
 };
 
+// Object property initializer shorthand
+function createMachine(name, status) {
+    return {
+        name: name,
+        status: status
+    };
+}
+let name = 'machine name';
+let machine = {
+    [name]: 'server',
+    'machine hours': 10000
+};
+console.log(machine[name]); // server
+console.log(machine['machine hours']); // 10000
 
+let server = {
+  name: "Server",
+  restart() {
+    console.log(`The ${this.name} is restarting!`);
+  },
+  "starting up"() {
+    console.log(`The ${this.name} is starting up!`);
+  },
+};
+server["starting up"]();
+server['restart']();
 
 
 
