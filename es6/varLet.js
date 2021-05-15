@@ -67,6 +67,49 @@ let server = {
 server["starting up"]();
 server['restart']();
 
-
-
+// to handle JavaScript default parameters in ES6
+function say(message) {
+    message = typeof message !== 'undefined' ? message : 'Hi';
+    console.log(message);
+}
+say();
+function says(message = 'hi') {
+    console.log(message);
+}
+says(); //hi
+says(undefined); //hi
+says('Hello'); //Hello
+// More JavaScript default parameter examples.
+function put(toy, toyBox = []) {
+    toyBox.push(toy);
+    console.log(toyBox);
+}
+put('cat'); // cat
+put('teddy bear'); // teddy bear
+function date(d = toDay()) {
+    console.log(d);
+}
+function toDay() {
+    return new Date().toLocaleDateString("en-US");
+}
+date();
+// We can use this feature to make arguments are mandatory. If the caller doesn’t pass any argument, we throw an error:
+function requiredArg() {
+   throw new Error('The argument is required');
+}
+function add(x = requiredArg(), y = requiredArg()){
+   console.log(x + y);
+}
+// add(10); // error
+add(10,20); // OK
+// Using other parameters in default values
+function adds(x = 1, y = x, z = x + y) {
+    console.log(x + y + z);
+}
+adds();
+let taxRate = () => 0.1;
+let getPrice = function (price, tax = price * taxRate()) {
+    console.log(price + tax);
+}
+getPrice(100);
 
