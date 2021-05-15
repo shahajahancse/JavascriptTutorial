@@ -245,3 +245,43 @@ function stat(a, b) {
 }
 let [ssums, average, difference] = stat(20, 10);
 console.log(ssums, average, difference); // 30, 15, 10
+
+// Introduction to the JavaScript for...of loop
+let forOf = [60, 70, 80];
+for (const a of forOf) {
+    console.log(a);
+}
+let colors = ["Red", "Green", "Blue"];
+for (const [index, color] of colors.entries()) {
+  console.log(`${color} is at index ${index}`);
+}
+// In-place object destructuring with for…of
+const ratings = [
+    {user: 'John',score: 3},
+    {user: 'Jane',score: 4},
+    {user: 'David',score: 5},
+    {user: 'Peter',score: 2},
+];
+let sumas = 0;
+for (const {score} of ratings) {
+    sumas += score;
+}
+console.log(`Total scores: ${sumas}`); // 14
+// Iterating over strings
+let stra = "abc";
+for (let c of stra) {
+  console.log(c);
+}
+// Iterating over Map objects
+let colorsa = new Map();
+colorsa.set("red", "#ff0000");
+colorsa.set("green", "#00ff00");
+colorsa.set("blue", "#0000ff");
+for (let color of colorsa) {
+  console.log(color);
+}
+//  Iterating over Set objects
+let nums = new Set([1, 2, 3]);
+for (let num of nums) {
+  console.log(num);
+}
