@@ -77,3 +77,28 @@ let app = new class {
     }
 }('Awesome App')
 app.start(); // Starting the Awesome App...
+
+
+// Introduction to the JavaScript static methods
+Person.createAnonymous = function (gender) {
+  let name = gender == "male" ? "John Due" : "Jane Due";
+  return new Person(name);
+};
+var anonymous = Person.createAnonymous();
+console.log(anonymous);
+// JavaScript static methods in ES6.
+class EsPerson {
+    constructor(name) {
+        this.name = name;
+    }
+    getName() {
+        return this.name;
+    }
+    static createAnonymous(gender) {
+        let name = gender == 'male' ? 'Joy' : 'Job';
+        return new EsPerson(name);
+    }
+}
+anonymous = EsPerson.createAnonymous("male");
+console.log(anonymous);
+
