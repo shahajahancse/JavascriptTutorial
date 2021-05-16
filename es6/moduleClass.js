@@ -47,3 +47,33 @@ console.log(typeof Persons); // function
 console.log(john instanceof Persons); // true
 console.log(john instanceof Object); // true
 
+
+// Introduction to JavaScript class expressions.
+let JClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+    getName() {
+        return this.name;
+    }
+}
+var jClass = new JClass('Jak');
+console.log(jClass.getName());
+
+function factory(aClass) {
+    return new aClass();
+}
+let greeting = factory(class {
+    sayHi() { console.log('Hi'); }
+});
+greeting.sayHi(); // 'Hi'
+
+let app = new class {
+    constructor(name) {
+        this.name = name;
+    }
+    start() {
+        console.log(`Starting the ${this.name}...`);
+    }
+}('Awesome App')
+app.start(); // Starting the Awesome App...
