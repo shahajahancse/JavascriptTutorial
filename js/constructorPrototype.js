@@ -132,8 +132,8 @@ let honda = {
 let audi = {
   brand : 'audi',
 };
-getPrefix.call(honda,  "It's a ");
-getPrefix.call(audi, "It's an ");
+getPrefix.call(honda,  "It's a "); // "It's a Honda"
+getPrefix.call(audi, "It's an "); // "It's a Audi"
 getPrefix.apply(honda, ["It's a "]); // "It's a Honda"
 getPrefix.apply(audi, ["It's an "]); // "It's a Audi"
 // ES6

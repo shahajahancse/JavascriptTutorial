@@ -124,3 +124,88 @@ class GetNames {
 }
 let getName = new GetNames('John', 'Due');
 console.log(getName.fullName);
+
+
+// Implementing JavaScript inheritance using extends and super
+// the prototypal inheritance technique.
+function Animals(legs) {
+    this.legs = legs;
+}
+Animals.prototype.walk = function () {
+    console.log("walking on " + this.legs + " legs");
+}
+function Bird(legs) {
+    Animals.call(this, legs);
+}
+Bird.prototype = Object.create(Animals.prototype);
+Bird.prototype.constructor = Animals; // extra
+Bird.prototype.fly = function () {
+    console.log('flying');
+}
+var pigeon = new Bird(2);
+pigeon.walk(); // walking on 2 legs
+pigeon.fly(); // flying
+// ES6 Inheritance
+class Animal {
+    constructor(legs) {
+        this.legs = legs;
+    }
+    walk() {
+        console.log('walking on ' + this.legs + ' legs');
+    }
+    static helloWorld() {
+        console.log('Hello World');
+    }
+}
+class Birds extends Animal {
+    constructor(legs) {
+        super(legs);
+    }
+    fly() {
+        console.log('flying');
+    }
+}
+let bird = new Birds(2);
+bird.walk();
+bird.fly();
+// Shadowing methods
+class Dog extends Animal {
+    constructor() {
+        super(4);
+    }
+    walk() {
+        super.walk(); // call Animal method walk()
+        console.log(`go walking`);
+    }
+}
+let bingo = new Dog();
+bingo.walk(); // walking on 4 legs  //go walking
+// Inheriting static members
+Birds.helloWorld(); // Hello World
+// and same as
+Dog.helloWorld(); // Hello World
+// Inheriting from built-in types
+class Queue extends Array {
+    enqueue(e) {
+        super.push(e);
+    }
+    dequeue() {
+        return super.shift();
+    }
+    peek() {
+        return !this.empty() ? this[0] : undefined;
+    }
+    empty() {
+        return this.length === 0;
+    }
+}
+var customers = new Queue();
+customers.enqueue('A');
+customers.enqueue('B');
+customers.enqueue('C');
+
+while (!customers.empty()) {
+    console.log(customers.dequeue());
+}
+
+
