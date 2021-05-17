@@ -209,3 +209,27 @@ while (!customers.empty()) {
 }
 
 
+// Introduction to JavaScript new.target
+function Personsss(name) {
+    if (!new.target) {
+        throw "must use new operator with Person";
+    }
+    this.name = name;
+}
+john = new Personsss("John");
+console.log(john.name); // john
+// JavaScript new.target in constructors
+class Personasa {
+    constructor(name) {
+        this.name = name;
+        console.log(new.target.name);
+    }
+}
+class Employee extends Personasa {
+    constructor(name, title) {
+        super(name);
+        this.title = title;
+    }
+}
+john = new Personasa('John Doe'); // Personasa
+let lily = new Employee('Lily Bush', 'Programmer'); // Employee
