@@ -102,3 +102,25 @@ class EsPerson {
 anonymous = EsPerson.createAnonymous("male");
 console.log(anonymous);
 
+
+// Introduction to JavaScript Computed Property.
+let propName = 'c';
+const rank = {
+    a: 1,
+    b: 2,
+    [propName]: 3
+};
+console.log(rank.c); //3
+
+name = 'fullName';
+class GetNames {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get[name]() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+let getName = new GetNames('John', 'Due');
+console.log(getName.fullName);
