@@ -124,13 +124,62 @@ class Bag {
         }
     }
 }
-
 let bag = new Bag();
-
 bag.add(1);
 bag.add(2);
 bag.add(3);
-
 for (let e of bag) {
     console.log(e);
 }
+
+
+// Introduction to the JavaScript yield keyword
+function* foo() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+f = foo();
+console.log(f.next());
+// Returning undefined
+function* bar() {
+    yield;
+}
+let b = bar();
+console.log(b.next());
+// Passing a value to the next() method
+function* generates() {
+    let result = yield;
+    console.log(`result is ${result}`);
+}
+let g = generates();
+console.log(g.next());
+console.log(g.next(1000));
+// Using yield in an array
+function* baz() {
+    let arr = [yield, yield];
+    console.log(arr);
+}
+var z = baz();
+console.log(z.next());
+console.log(z.next(1));
+console.log(z.next(2));
+// Using yield to return an array
+function* yieldArray() {
+    yield 1;
+    yield [ 20, 30, 40 ];
+}
+let y = yieldArray();
+console.log(y.next());
+console.log(y.next());
+console.log(y.next());
+//  Using the yield to return individual elements of an array
+function* yieldArrayElements() {
+    yield 1;
+    yield* [ 20, 30, 40 ];
+}
+let a = yieldArrayElements();
+console.log(a.next()); // { value: 1, done: false }
+console.log(a.next()); // { value: 20, done: false }
+console.log(a.next()); // { value: 30, done: false }
+console.log(a.next()); // { value: 40, done: false }
