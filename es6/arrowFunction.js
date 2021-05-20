@@ -93,3 +93,59 @@ let dumps = message => console.log(message);
 console.log(dumps.hasOwnProperty('prototype')); // false
 
 
+// When You Should Not Use Arrow Functions
+const greeting = document.querySelector("#greeting");
+const username = document.querySelector("#username");
+// username.addEventListener("keyup", () => {
+//   greeting.textContent = "Hello " + this.value;
+// });
+//  not used the above code // and used the bellow code
+username.addEventListener("keyup", function () {
+  greeting.textContent = "Hello " + this.value;
+});
+// Object methods AND Class methods
+const counter = {
+  count: 0,
+  next: () => ++this.count,
+  current: () => this.count,
+};
+// console.log(counter.next()); // not use the above code, used the bellow code
+const counters = {
+  count: 0,
+  next() {
+    return ++this.count;
+  },
+  current() {
+    return this.count;
+  },
+};
+console.log(counters.next());
+//  class
+class Counter {
+  constructor() {
+    this.count = 3;
+  }
+  next = () => ++this.count;
+  current = () => this.count;
+}
+let nxt = new Counter();
+console.log(nxt.next());
+// Prototype methods
+function Counters() {
+    this.count = 0;
+}
+Counters.prototype.next = function () {
+    return this.count;
+};
+Counters.prototype.current = function () {
+    return ++this.next;
+}
+// Functions that use arguments object
+const concat = (separator) => {
+  let args = Array.prototype.slice.call(arguments, 1);
+  return args.join(separator);
+};
+function concats(separator) {
+  let args = Array.prototype.slice.call(arguments, 1);
+  return args.join(separator);
+}
