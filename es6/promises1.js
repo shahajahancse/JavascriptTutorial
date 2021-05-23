@@ -64,3 +64,21 @@ function reset() {
     hideLoadingIndicator();
     showContent('');
 }
+
+// deal with error handling in promises.
+function getUserById(id) {
+  if (typeof id !== "number" || id <= 0) {
+    throw new Error("Invalid id argument");
+  }
+
+  return new Promise((resolve, reject) => {
+    resolve({
+      id: id,
+      userName: "admin",
+    });
+  });
+}
+getUserById('a')
+  .then((user) => console.log(user.username))
+  .catch((err) => console.log(err));
+
