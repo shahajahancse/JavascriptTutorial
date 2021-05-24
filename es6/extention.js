@@ -78,3 +78,13 @@ let customers = [{
 }];
 console.log(customers.find((c) => c.credit > 100));
 
+
+// JavaScript findIndex() examples
+let ranks = [1, 5, 7, 8, 10, 7];
+let index = ranks.findIndex((rank) => rank === 7);
+console.log(index);
+
+ranks = [1, 3, 5, 7, 8, 10, 7];
+index = ranks.findIndex((rank, index) => rank === 7 && index > 2);
+console.log(index);
+
