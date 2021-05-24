@@ -88,3 +88,22 @@ ranks = [1, 3, 5, 7, 8, 10, 7];
 index = ranks.findIndex((rank, index) => rank === 7 && index > 2);
 console.log(index);
 
+
+// Using JavaScript Object.assign() to clone an object
+let widget = {
+  color: "red",
+};
+let clonedWidget = Object.assign({}, widget);
+console.log(clonedWidget);
+// Using JavaScript Object.assign() to merge objects
+let box = {
+    height: 10,
+    width: 20
+};
+let style = {
+    color: 'Red',
+    borderStyle: 'solid'
+};
+let styleBox = Object.assign({}, box, style);
+console.log(styleBox);
+
