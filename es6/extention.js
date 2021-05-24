@@ -107,3 +107,16 @@ let style = {
 let styleBox = Object.assign({}, box, style);
 console.log(styleBox);
 
+
+// The === operator treats -0 and +0 are the same value:
+let amount = +0,
+  volume = -0;
+console.log(volume === amount);
+// However, the Object.is() treats +0 and -0 as different values.
+console.log(Object.is(amount, volume));
+// === treats NaN as the different value:
+let quantity = NaN;
+console.log(quantity === quantity);
+// However, Object.is() treats NaN as the same value:
+console.log(Object.is(quantity, quantity));
+
