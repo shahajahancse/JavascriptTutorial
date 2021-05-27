@@ -23,3 +23,28 @@ const getFullNameProxy = new Proxy(getFullName, {
     }
 });
 console.log(getFullNameProxy(user)); //
+
+
+
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+let args = ['John', 'Doe'];
+let john = Reflect.construct(
+    Person,
+    args
+);
+console.log(john instanceof Person);
+console.log(john.fullName); // John Doe
+
+let result = Function.prototype.apply.call(Math.max, Math, [10, 20, 30]);
+console.log(result);
+// or
+result = Reflect.apply(Math.max, Math, [10, 20, 30]);
+console.log(result);
