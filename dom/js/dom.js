@@ -19,3 +19,34 @@ setTimeout(() => {
     jsWindow.close();
 }, 3000);
 
+
+// Introduction to JavaScript confirm() method
+let result = confirm('Are you sure you want to delete?');
+let message = result ? 'You clicked the OK button' : 'You clicked the Cancel button';
+alert(message);
+
+// Introduction to JavaScript prompt() method
+let lang = prompt("What is your favorite programming language?");
+let feedback = lang.toLowerCase() === "javascript" ? `It's great!` : `It's ${lang}`;
+alert(feedback);
+
+let ageStr = prompt('How old are you?');
+let age = Number(ageStr);
+feedback = age >= 16 ?
+    `You're eligible to join.` :
+    `You must be at least 16 year old to join.`;
+alert(feedback);
+
+
+// Introduction to JavaScript setInterval()
+let intervalID;
+function toggleColor() {
+    let e = document.getElementById('flashtext');
+    e.style.color = e.style.color == 'red' ? 'blue' : 'red';
+}
+function start() {
+    intervalID = setInterval(toggleColor, 1000);
+}
+function stop() {
+    clearInterval(intervalID);
+}
