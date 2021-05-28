@@ -50,3 +50,25 @@ function start() {
 function stop() {
     clearInterval(intervalID);
 }
+
+
+
+
+// URLSearchParams() methods
+const urlParams = new URLSearchParams("?type=list&page=20");
+for (const [key, value] of urlParams) {
+  console.log(`${key}:${value}`);
+}
+// keys(), values() & entries()
+for (const key of urlParams.keys()) {
+    console.log(key);
+}
+for (const value of urlParams.values()) {
+    console.log(value);
+}
+for (const entry of urlParams.entries()) {
+    console.log(entry);
+}
+// Check if a query string parameter exists
+console.log(urlParams.has("page"));
+console.log(urlParams.has('Jak'));
