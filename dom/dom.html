@@ -7,12 +7,69 @@
     <title>Dom</title>
 </head>
 <body>
-
-  <p id="flashtext">JavScript setInterval Demo</p>
+    <header>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"><a href="#home">Home</a></li>
+                <li class="menu-item"><a href="#services">Services</a></li>
+                <li class="menu-item"><a href="#about">About</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  <!-- <p id="flashtext">JavScript setInterval Demo</p>
   <button onclick="start()">Start</button>
-  <button onclick="stop()">Stop</button>
+  <button onclick="stop()">Stop</button> -->
+  <p id="message">A paragraph</p>
+    <p>Please rate the service:</p>
+    <p id="items">
+        <input class="item" type="radio" name="rate" value="Very poor"> Very poor
+        <input class="item" type="radio" name="rate" value="Poor"> Poor
+        <input class="item" type="radio" name="rate" value="OK"> OK
+        <input class="item" type="radio" name="rate" value="Good"> Good
+        <input class="item" type="radio" name="rate" value="Very Good"> Very Good
+    </p>
+    <p>
+        <button id="btnRate">Submit</button>
+    </p>
+
+    <h1>JavaScript getElementsByTagName() Demo</h1>
+    <h2>First heading</h2>
+    <p class="firstItem">This is the first paragraph.</p>
+    <h2>Second heading</h2>
+    <p>This is the second paragraph.</p>
+    <h2>Third heading</h2>
+    <button id="btnCount">Count H2</button>
 
 
-    <script src="js/dom.js"></script>
+    <main>
+        <div class="container">
+            <section class="section-a">
+                <h2>UI/UX</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem placeat, atque accusamus voluptas
+                    laudantium facilis iure adipisci ab veritatis eos neque culpa id nostrum tempora tempore minima.
+                    Adipisci, obcaecati repellat.</p>
+                <button>Read More</button>
+            </section>
+            <section class="section-b">
+                <h2>PWA Development</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni fugiat similique illo nobis quibusdam
+                    commodi aspernatur, tempora doloribus quod, consectetur deserunt, facilis natus optio. Iure
+                    provident labore nihil in earum.</p>
+                <button>Read More</button>
+            </section>
+            <section class="section-c">
+                <h3>Mobile App Dev</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos culpa laudantium consequatur ea!
+                    Quibusdam, iure obcaecati. Adipisci deserunt, alias repellat eligendi odit labore! Fugit iste sit
+                    laborum debitis eos?</p>
+                <button>Read More</button>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="js/selectElement.js"></script>
+    <!-- <script src="js/dom.js"></script> -->
 </body>
 </html>
