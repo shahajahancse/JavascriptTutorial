@@ -49,7 +49,39 @@ let getSiblings = function (e) {
 
 let siblings = getSiblings(document.querySelector('.current'));
 siblingText = siblings.map(e => e.innerHTML);
-console.log(siblingText)
+console.log(siblingText);
 
 
-
+// JavaScript CreateElement
+// 1 Creating a new div add id and class
+let div = document.createElement('div');
+div.id = 'content';
+div.className = "class-add";
+div.innerHTML = '<p>createElement example</p>';
+div.firstElementChild.className = "class-name";
+document.body.appendChild(div);
+// create a new heading and add it to the div
+let h2 = document.createElement('h2');
+h2.id = 'h2Id';
+h2.className = 'h2-class';
+h2.textContent = "Add h2 element to the div";
+div.appendChild(h2);
+// 2) Creating new list items ( li) example
+let li = document.createElement('li');
+li.textContent = 'demo 1';
+li.id = 'demo1';
+li.className = 'demo-1';
+content.appendChild(li);
+li = document.createElement("li");
+li.textContent = 'demo 2';
+li.id = 'demo2';
+li.className = 'demo-2';
+content.appendChild(li);
+// 3) Creating a script element example
+function loadJSAsync(url) {
+    let script = document.createElement('script');
+    script.src = url;
+    script.async = true;
+    document.body.appendChild(script);
+}
+// loadJSAsync('js/dom.js');
