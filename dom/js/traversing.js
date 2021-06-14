@@ -85,3 +85,23 @@ function loadJSAsync(url) {
     document.body.appendChild(script);
 }
 // loadJSAsync('js/dom.js');
+
+// 1) Simple appendChild() example with method()
+function createMenuItem(name) {
+    let li = document.createElement('li');
+    li.textContent = name;
+    return li;
+}
+const menu = document.querySelector('#menu');
+menu.appendChild(createMenuItem('demo 3'));
+menu.appendChild(createMenuItem('demo 4'));
+menu.appendChild(createMenuItem('demo 5'));
+// 2) Moving a node within the document example
+const firstList = document.querySelector('#firstList');  // get the first list
+const everest = firstList.firstElementChild;   // take the first child element
+const secondList = document.querySelector('#secondList');   // get the second list
+secondList.appendChild(everest);
+// Reading textContent from a node
+note = document.getElementById("main");
+console.log(note.textContent);
+console.log(note.innerText);
