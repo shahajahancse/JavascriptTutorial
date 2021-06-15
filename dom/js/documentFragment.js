@@ -44,4 +44,36 @@ nodes = langs.map(lang => {
 app.prepend(...nodes);
 
 
+// Introduction to JavaScript insertAdjacentHTML() method
+let list = document.querySelector("#list");
+list.insertAdjacentHTML("beforebegin", "<h2>Web Technology</h2>");
+list.insertAdjacentHTML("afterbegin", "<li>HTML</li>");
+list.insertAdjacentHTML("beforeend", "<li>JavaScript</li>");
+list.insertAdjacentHTML("afterend", "<p>For frontend developers</p>");
+
+// JavaScript replaceChild
+menu = document.querySelector('#menu');
+// create a new note
+li = document.createElement('li');
+li.textContent = "Homepage";
+// replace the first list item
+menu.replaceChild(li, menu.firstElementChild);
+
+// JavaScript cloneNode() example
+let clonedMenu = menu.cloneNode(true);
+clonedMenu.id = 'menuId';
+document.body.appendChild(clonedMenu);
+
+// JavaScript removeChild() example
+menu.removeChild(menu.lastElementChild);
+// Removing all child nodes of an element
+let menuItem = document.querySelector("#menuItem");
+while (menuItem.firstChild) {
+    if (menuItem.firstChild < 0 ) {
+        break;
+    } else {
+        menuItem.removeChild(menuItem.firstChild);
+    }
+}
+
 
