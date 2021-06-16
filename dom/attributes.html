@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working with Attributes</title>
+    <style>
+        body {
+            font: arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        #main {
+            background-color: #fff3d4;
+            border: solid 1px #f6b73c;
+            padding: 10px;
+            color: black;
+        }
+        #main::first-letter {
+            font-size: 20px;
+            font-weight: normal
+        }
+    </style>
 </head>
 <body>
     <input type="text" id="userName" secured="true">
     <input type="text" id="tabIndex" tabindex="1">
     <input type="checkbox" id="chkAccept" checked> Accept
     <input type="password" id="password" style="color:red; width:15%">
-    <div id="main" data-progress="pending" data-value="10%"></div>
+    <div id="main" class="content head" style="color: red;" data-progress="pending" data-value="10%">style</div>
     <a href="" target="_blank" id="js">JavaScript </a>
 
     <script src="js/attributes.js"></script>

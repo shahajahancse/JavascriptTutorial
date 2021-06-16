@@ -61,3 +61,47 @@ if (js) {
   let target = js.hasAttribute('target');
   console.log(target);
 }
+
+
+// Setting inline styles
+function css(e, styles) {
+  for (const property in styles) {
+    e.style[property] = styles[property];
+  }
+}
+css(js, { color: 'red', textDecoration: 'none'});
+
+//1) Simple getComputedStyle() examples
+let style = getComputedStyle(js,':hover');
+console.log(style.hover);
+let main = document.querySelector('#main');
+let styleCSS = getComputedStyle(main);
+console.log('color: ', styleCSS.color);
+console.log('background color: ', styleCSS.backgroundColor);
+// 2) The getComputedStyle() for pseudo-elements example
+let firstLetter = getComputedStyle(main, '::first-letter');
+console.log(firstLetter.fontSize);
+
+// checking className
+console.log(main.className);
+// add class
+main.className += ' class1 class2';
+console.log(main.className);
+
+// Introduction to JavaScript classList property
+for (const cssClass of main.classList) {
+  console.log(cssClass);
+}
+// 2) Add one or more classes to the class list of an element
+main.classList.add('info'); // single class add
+main.classList.add('visible','enable'); // multi class add
+console.log(main.className);
+// 3) Remove element’s classes
+main.classList.remove('visible'); //single
+main.classList.remove('info','enable');
+console.log(main.className);
+// 4) Replace a class of an element
+main.classList.replace('class1', 'nav');
+console.log(main.className);
+// 5) Check if an element has a specified class
+console.log(main.classList.contains('nav')); //true
