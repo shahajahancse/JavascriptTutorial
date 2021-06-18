@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripting Web Forms</title>
+    <style>
+        form input.error {
+            border-color: #e74c3c;
+        }
+        form input.success {
+            border-color: #c3e6cb
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="" method="post" id="signup">
+            <h1>Sign Up</h1>
+            <small></small>
+            <input type="text" placeholder="Full Name">
+            <small></small>
+            <input type="text" placeholder="Email Address">
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+
+    <form>
+        <input type="radio" name="choice" value="yes"> Yes
+        <input type="radio" name="choice" value="no"> No
+        <input type="button" id="btn" value="Show Selected Value">
+    </form>
+    <input type="checkbox" name="color" value="red"> Red
+    <input type="checkbox" name="color" value="green"> Green
+    <input type="checkbox" name="color" value="blue"> Blue
+    <button id="box">Get Selected Colors</button>
+    <button id="boxs">Selected</button>
+    <select id="framework">
+        <option value="1">Angular</option>
+        <option value="2">React</option>
+        <option value="3">Vue.js</option>
+        <option value="4">Ember.js</option>
+    </select>
+    <button id="select">Selected Index</button>
+
+    <script script src="js/webForms.js"></script>
+</body>
+</html>
