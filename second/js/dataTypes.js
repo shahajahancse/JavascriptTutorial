@@ -82,3 +82,41 @@ console.log(message);
      console.log('count is: ' + count);
      count++;
  } while (count < 4);
+
+
+//  Strings
+let str = new String("JavaScript String Type");
+console.log(str.valueOf());
+console.log(str.toString());
+console.log(str.toLocaleString());
+console.log('literal string'.toUpperCase());
+console.log(str.substr(0, 10)); // "JavaScript"
+console.log(str.substr(11,6)); // "String"
+console.log(str.substring(4, 10)); // "Script"
+// Replacing substrings
+str = "the baby kicks the ball";
+// replace "the" with "a"
+let newStr = str.replace(/the/g, 'a');
+console.log(newStr); // "a baby kicks a ball"
+console.log(str); // "the baby kicks the ball"
+// Padding a String to a Certain Length with Another String
+str = '1234';
+console.log(str.padStart(8, '0')); // "00001234"
+console.log(str.padEnd(6, '*'));
+// JavaScript split() examples
+str = "JavaScript String split()";
+console.log(str.split(' '));
+console.log(str.split(' ', 2)); //limited number of substrings
+// Splitting a string using a regular expression example
+let paragraph = "Good Morning! How are you? This is John. John is my friend.";
+str = paragraph.split(/[!,?,.]/);
+console.log(str);
+str = paragraph.split(/([!,?,.])/); //the regular expression contains capturing parentheses ()
+console.log(str);
+console.log(paragraph.substring(0, 12)); //Extracting a substring from the beginning
+console.log(contact.email.substring(12)); // Extracting a substring to the end
+console.log(contact.email.substring(contact.email.indexOf('@')+1)); //Extracting domain from the email
+// String slice() method example
+console.log(contact.email.slice(0, contact.email.indexOf('@')));
+console.log(contact.email.slice(14));
+

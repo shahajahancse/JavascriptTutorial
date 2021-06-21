@@ -1,23 +1,33 @@
 ### This file create to All common function define.
 
+###### toString()
+toString() method convert string, And toString() method doesn’t work for undefined and null.  Ex: to second/dataTypes.js file
+###### valueOf(), toString(), and toLocaleString().
+To get the primitive string value,   Ex: to second/dataTypes.js file
 ###### concat ()
     this method use js. But better operator(+) to js & Php use symbol(.).
-###### split()
-    this method use js & Like php used explode(), String to array convert.
+   ###### Extracting substrings substr()
+   To extract a substring from a string. And The substr() method accepts two arguments. First argument `startIndex` and second argument `length` specifies the number of characters to extract.
 ###### indexOf() & lastIndexOf()
-    this method used ot check index of string.
+    this method used ot check index of string. And both method always perform a case-sensitive search.
 ###### replace()
-    used to replace string Ex: re.replace(/the/g, "a");  <!-- let re = "the baby kicks the ball"; -->
+    used to replace string Ex: re.replace(/the/g, "a");  <!-- let re = "the baby kicks the ball"; --> like php str_replace()
+###### padStart() padEnd()
+the padStart() & padEnd() method pads a string to a certain length with another string
 ###### match() & search()
     used to match Or search element in string.
 ######  substring()
-    used to extract a string. Ex: str.substring(0,10);  <!-- let str = 'JavaScript Substring'; -->
+    substring() returns the part of the string between the start and end indexes. Ex: str.substring(0,10);  <!-- let str = 'JavaScript Substring'; -->
 ###### trim(), trimStart() & trimEnd()
     used to whitespace remove.
 ###### toLocaleLowerCase(), toUpperCase() & toLowerCase() & localeCompare()
     Changing cases to lowercase and uppercase, And localeCompare() Comparing of strings,
+###### split()
+    The split() divides a string into an array of substrings method use js & Like php used explode(), String to array convert.
+###### join()
+    The join() method to concatenate all elements of an array into a string separated by a separator. like php implode() Ex to arrays3.js file.
 ###### slice()
-    to extract a substring from a string. Ex: email.slice(0,email.indexOf('@'));  <!-- let email = 'john@example.com' -->
+    The slice() method returns a substr from the startIndex to the endIndex in the string. AND  slice() & substring() same work. Ex: email.slice(0,email.indexOf('@'));  <!-- let email = 'john@example.com' -->
 ###### length()
     return the length of array and string. Ex: mountains.length;  <!-- let mountains = ['Everest', 'Fuji', 'Nanga Parbat']; -->
 ###### push(), unshift() & pop(), shift()
@@ -42,8 +52,6 @@
     JavaScript Array map() method to transform elements of an array according to a provided function. Ex: to arrays3.js file
 ###### forEach()
     JavaScript Array forEach() method to execute a callback on every element of an array.  Ex: to arrays3.js file.
-###### join()
-    JavaScript Array join() method to concatenate all elements of an array into a string separated by a separator. Ex to arrays3.js file.
 ###### push() and splice()
     add a new element at the end of the multidimensional array push(), Insert an element in the middle of the array splice(). Ex to arrays3.js.
 ###### bind()
