@@ -27,7 +27,7 @@ the padStart() & padEnd() method pads a string to a certain length with another 
 ###### join()
     The join() method to concatenate all elements of an array into a string separated by a separator. like php implode() Ex to arrays3.js file.
 ###### slice()
-    The slice() method returns a substr from the startIndex to the endIndex in the string. AND  slice() & substring() same work. Ex: email.slice(0,email.indexOf('@'));  <!-- let email = 'john@example.com' -->
+    The slice() method extract a part of string. The slice() method returns a substr from the startIndex to the endIndex in the string. AND  slice() & substring() same work. And  copy elements of an array. Ex: email.slice(0,email.indexOf('@'));  <!-- let email = 'john@example.com' -->
 ###### length()
     return the length of array and string. Ex: mountains.length;  <!-- let mountains = ['Everest', 'Fuji', 'Nanga Parbat']; -->
 ###### push(), unshift() & pop(), shift()
