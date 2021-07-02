@@ -178,3 +178,109 @@ let nums = new Set([1, 2, 3]);
 for (let num of nums) {
     console.log(num);
 }
+
+// JavaScript template literals
+str = `Template literal in ES6`;
+console.log(str);// Template literal in ES6
+console.log(str.length); // 23
+console.log(typeof str);// string
+
+let anotherStr = `Here's a template literal`;
+let strWithBacktick = `Template literals use backtick \` instead of quotes`;
+console.log(anotherStr);
+console.log(strWithBacktick);
+
+var msg = 'Multiline \n\
+string';
+console.log(msg);
+//Multiline
+//string
+msg = ["This text", "can", "span multiple lines"].join("\n");
+console.log(msg);
+
+// JavaScript Array destructuring
+function getScores() {
+   return [70, 80, 90];
+}
+let [x, y, z] = getScores();
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // 90
+
+function getScore() {
+   return [70, 80, 90, 100];
+}
+[x, y, z] = getScore();
+console.log(x); // 70
+console.log(y); // 80
+console.log(z); // 90
+// Array Destructuring Assignment and Rest syntax
+[z, y ,...args] = getScore();
+console.log(z); // 70
+console.log(y); // 80
+console.log(args); // [90, 100]
+
+let a, b;
+[a, b] = [10, 20];
+console.log(a); // 10
+console.log(b); // 20
+
+function getItems() {
+    return [10, 20];
+}
+let items = getItems();
+let thirdItem = items[2] != undefined ? items[2] : 0;
+console.log(thirdItem); // 0
+
+a, b;
+[a = 1, b = 2] = [10];
+console.log(a); // 10
+console.log(b); // 2
+// Nested array destructuring
+function getProfile() {
+    return [
+        'John',
+        'Doe',
+        ['Red', 'Green', 'Blue']
+    ];
+}
+let [
+    firstName,
+    lastName,
+    [
+        color1,
+        color2,
+        color3
+    ]
+] = getProfile();
+console.log(color1, color2, color3); // Red Green Blue
+console.log(firstName);
+// Functions that return multiple values
+function stat(a, b) {
+    return [
+        a + b,
+        (a + b) / 2,
+        a - b
+    ]
+}
+[sum, average, difference] = stat(20, 10);
+console.log(sum, average, difference); // 30, 15, 10
+
+
+// JavaScript object destructuring assignment
+let person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+console.log(firstName); // 'John'
+console.log(lastName); // 'Doe'
+// Setting default values
+person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    currentAge: 28
+};
+
+let { firstNamed, lastNamed, middleName = 'a', currentAge: age = 18 } = person;
+console.log(middleName); // a
+console.log(age); // 28
